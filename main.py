@@ -2,7 +2,8 @@ import google.generativeai as genai
 import streamlit as st
 
 api_key = st.secrets["GEMINI_API_KEY"]
-client = genai.GenerativeModel(model_name="gemini-3-flash-preview", api_key=api_key)
+genai.configure(api_key=api_key)
+client = genai.GenerativeModel(model_name="gemini-3-flash-preview")
 st.title("TranscriptSummarizer")
 
 
