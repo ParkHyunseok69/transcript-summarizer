@@ -55,8 +55,7 @@ To keep the app running smoothly for everyone:
 """)
 transcript = st.text_area("ENTER YOUR TRANSCRIPT HERE")
 
-response = client.models.generate_content(
-    model = "gemini-3-flash-preview",
+response = client.generate_content(
     contents = prompt + transcript
 )
 
